@@ -1,0 +1,59 @@
+import React from 'react';
+import phil12 from './pics/phil.png';
+import covid from './pics/covid.png';
+import './homepage.css';
+import about from'./about.js';
+
+import {BrowserRouter,Route,Link,Switch} from "react-router-dom";
+function homepage() {
+  return (<BrowserRouter>
+    <div className="App">
+
+
+    <div className="hkatawan">
+    <div className="hwelcome">
+    <h1>Let's Fight the COVID-19!</h1>
+    <p>LHave a nice day! This my own made website.<br/>
+     I hope  you like it. Find out more about on<br/>
+     this website! Click wherever you want and<br/>
+     dont forget to be amaze! Have a nice day!<br/>
+     This my own made website. I hope<br/>
+    you like it. Find out more about on this<br/>
+     website!  Click wherever you want and dont<br/>
+      forget to be amaze!<br/>
+      Created By: GREG VINCENT ARANAS</p>
+    <div className="button1">
+   <a href ="about">  <button>Learn More</button></a>
+
+    </div>
+
+    </div>
+
+    <div className="cov">
+  <a href ="about">   <img src={covid} className="covid"/> </a>
+     <a href ="/">  <img src={covid} className="covid2"/></a>
+    </div>
+    <div className="hsamplepic">
+
+    <img src={phil12} className="hphil12"/>
+    </div>
+
+
+    </div>
+
+    <main>
+
+        <Switch>
+
+    <Route path="/about"   component={about}/>
+
+       </Switch>
+        </main>
+ </div>
+
+</BrowserRouter>
+
+  );
+}
+
+export default homepage;
